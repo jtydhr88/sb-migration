@@ -1,0 +1,5 @@
+.settings
+.project
+.ivy
+*.class
+classes

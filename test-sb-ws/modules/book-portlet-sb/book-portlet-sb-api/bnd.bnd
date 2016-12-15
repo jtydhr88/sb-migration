@@ -1,0 +1,9 @@
+Bundle-Name: book-portlet-sb-api
+Bundle-SymbolicName: book.portlet.sb.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.liferay.book.exception,\
+	com.liferay.book.model,\
+	com.liferay.book.service,\
+	com.liferay.book.service.persistence
+-includeresource: META-INF/service.xml=../book-portlet-sb-service/service.xml
