@@ -58,9 +58,9 @@ public class BookServiceWrapper implements BookService,
 
 	@Override
 	public java.util.List<com.liferay.book.model.Book> getBooks(long groupId,
-		int start, int end)
+		int start, int end, com.liferay.portal.kernel.util.OrderByComparator obc)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return _bookService.getBooks(groupId, start, end);
+		return _bookService.getBooks(groupId, start, end, obc);
 	}
 
 	@Override

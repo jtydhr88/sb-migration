@@ -226,6 +226,11 @@ public class BookWrapper implements Book, ModelWrapper<Book> {
 		return _book.getDescription();
 	}
 
+	@Override
+	public java.lang.String getImageUrl() {
+		return _book.getImageUrl();
+	}
+
 	/**
 	* Returns the name of this book.
 	*

@@ -14,8 +14,6 @@
 
 package com.liferay.book.model.impl;
 
-import aQute.bnd.annotation.ProviderType;
-
 /**
  * The extended model implementation for the Book service. Represents a row in the &quot;BOOK_Book&quot; database table, with each column mapped to a property of this class.
  *
@@ -25,7 +23,6 @@ import aQute.bnd.annotation.ProviderType;
  *
  * @author terry
  */
-@ProviderType
 public class BookImpl extends BookBaseImpl {
 	/*
 	 * NOTE FOR DEVELOPERS:
@@ -34,4 +31,9 @@ public class BookImpl extends BookBaseImpl {
 	 */
 	public BookImpl() {
 	}
+
+	public String getImageUrl() {
+		return "https://www.baidu.com";
+	}
+
 }

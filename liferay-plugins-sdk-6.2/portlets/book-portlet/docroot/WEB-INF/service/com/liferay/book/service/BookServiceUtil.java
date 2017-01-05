@@ -64,9 +64,10 @@ public class BookServiceUtil {
 	}
 
 	public static java.util.List<com.liferay.book.model.Book> getBooks(
-		long groupId, int start, int end)
+		long groupId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator obc)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return getService().getBooks(groupId, start, end);
+		return getService().getBooks(groupId, start, end, obc);
 	}
 
 	public static int getBooksCount(long groupId)

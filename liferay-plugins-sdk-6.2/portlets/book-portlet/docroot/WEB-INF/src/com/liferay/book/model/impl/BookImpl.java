@@ -31,4 +31,8 @@ public class BookImpl extends BookBaseImpl {
 	 */
 	public BookImpl() {
 	}
+
+	public String getImageUrl() {
+		return "https://www.baidu.com";
+	}
 }

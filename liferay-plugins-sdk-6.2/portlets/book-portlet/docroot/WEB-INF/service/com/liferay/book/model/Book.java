@@ -31,4 +31,5 @@ public interface Book extends BookModel, PersistedModel {
 	 *
 	 * Never modify this interface directly. Add methods to {@link com.liferay.book.model.impl.BookImpl} and rerun ServiceBuilder to automatically copy the method declarations to this interface.
 	 */
+	public java.lang.String getImageUrl();
 }

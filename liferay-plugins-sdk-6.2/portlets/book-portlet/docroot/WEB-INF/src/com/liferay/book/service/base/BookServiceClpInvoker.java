@@ -34,7 +34,10 @@ public class BookServiceClpInvoker {
 
 		_methodName24 = "getBooks";
 
-		_methodParameterTypes24 = new String[] { "long", "int", "int" };
+		_methodParameterTypes24 = new String[] {
+				"long", "int", "int",
+				"com.liferay.portal.kernel.util.OrderByComparator"
+			};
 
 		_methodName25 = "getBooksCount";
 
@@ -78,7 +81,8 @@ public class BookServiceClpInvoker {
 				Arrays.deepEquals(_methodParameterTypes24, parameterTypes)) {
 			return BookServiceUtil.getBooks(((Long)arguments[0]).longValue(),
 				((Integer)arguments[1]).intValue(),
-				((Integer)arguments[2]).intValue());
+				((Integer)arguments[2]).intValue(),
+				(com.liferay.portal.kernel.util.OrderByComparator)arguments[3]);
 		}
 
 		if (_methodName25.equals(name) &&

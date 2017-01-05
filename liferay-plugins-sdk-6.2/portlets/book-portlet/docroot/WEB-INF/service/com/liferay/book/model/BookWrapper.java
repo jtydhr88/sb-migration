@@ -500,6 +500,11 @@ public class BookWrapper implements Book, ModelWrapper<Book> {
 	}
 
 	@Override
+	public java.lang.String getImageUrl() {
+		return _book.getImageUrl();
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;

@@ -28,6 +28,7 @@ import com.liferay.portal.kernel.spring.osgi.OSGiBeanProperties;
 import com.liferay.portal.kernel.transaction.Isolation;
 import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
+import com.liferay.portal.kernel.util.OrderByComparator;
 
 import java.util.List;
 
@@ -76,6 +77,6 @@ public interface BookService extends BaseService {
 	public java.lang.String getOSGiServiceIdentifier();
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public List<Book> getBooks(long groupId, int start, int end)
-		throws SystemException;
+	public List<Book> getBooks(long groupId, int start, int end,
+		OrderByComparator obc) throws SystemException;
 }

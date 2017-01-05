@@ -66,10 +66,11 @@ import java.rmi.RemoteException;
 @ProviderType
 public class BookServiceSoap {
 	public static com.liferay.book.model.BookSoap[] getBooks(long groupId,
-		int start, int end) throws RemoteException {
+		int start, int end, com.liferay.portal.kernel.util.OrderByComparator obc)
+		throws RemoteException {
 		try {
 			java.util.List<com.liferay.book.model.Book> returnValue = BookServiceUtil.getBooks(groupId,
-					start, end);
+					start, end, obc);
 
 			return com.liferay.book.model.BookSoap.toSoapModels(returnValue);
 		}

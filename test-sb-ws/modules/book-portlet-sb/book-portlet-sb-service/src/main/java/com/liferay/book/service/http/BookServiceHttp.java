@@ -56,14 +56,15 @@ import com.liferay.portal.kernel.util.MethodKey;
 @ProviderType
 public class BookServiceHttp {
 	public static java.util.List<com.liferay.book.model.Book> getBooks(
-		HttpPrincipal httpPrincipal, long groupId, int start, int end)
+		HttpPrincipal httpPrincipal, long groupId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator obc)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		try {
 			MethodKey methodKey = new MethodKey(BookServiceUtil.class,
 					"getBooks", _getBooksParameterTypes0);
 
 			MethodHandler methodHandler = new MethodHandler(methodKey, groupId,
-					start, end);
+					start, end, obc);
 
 			Object returnObj = null;
 
@@ -233,7 +234,8 @@ public class BookServiceHttp {
 
 	private static Log _log = LogFactoryUtil.getLog(BookServiceHttp.class);
 	private static final Class<?>[] _getBooksParameterTypes0 = new Class[] {
-			long.class, int.class, int.class
+			long.class, int.class, int.class,
+			com.liferay.portal.kernel.util.OrderByComparator.class
 		};
 	private static final Class<?>[] _getBooksCountParameterTypes1 = new Class[] {
 			long.class

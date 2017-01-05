@@ -5,5 +5,6 @@ Export-Package: \
 	com.liferay.book.exception,\
 	com.liferay.book.model,\
 	com.liferay.book.service,\
-	com.liferay.book.service.persistence
+	com.liferay.book.service.persistence,\
+	com.liferay.test.mm
 -includeresource: META-INF/service.xml=../book-portlet-sb-service/service.xml

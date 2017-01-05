@@ -22,6 +22,7 @@ import com.liferay.book.service.permission.BookModelPermission;
 import com.liferay.book.service.permission.BookPermission;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.security.permission.ActionKeys;
 import com.liferay.portal.service.ServiceContext;
 
@@ -45,8 +46,8 @@ import com.liferay.portal.service.ServiceContext;
  */
 public class BookServiceImpl extends BookServiceBaseImpl {
 
-	public List<Book> getBooks(long groupId, int start, int end) throws SystemException {
-		return bookPersistence.filterFindByGroup(groupId, start, end);
+	public List<Book> getBooks(long groupId, int start, int end, OrderByComparator obc) throws SystemException {
+		return bookPersistence.filterFindByGroup(groupId, start, end, obc);
 	}
 
 	public int getBooksCount(long groupId) throws SystemException {

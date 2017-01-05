@@ -20,7 +20,7 @@ boolean addBook = BookPermission.contains(themeDisplay.getPermissionChecker(), t
 	<liferay-ui:search-container-results>
 	<%
 	searchContainer.setTotal(BookServiceUtil.getBooksCount(themeDisplay.getScopeGroupId()));
-	searchContainer.setResults(BookServiceUtil.getBooks(themeDisplay.getScopeGroupId(),searchContainer.getStart(), searchContainer.getEnd()));
+	searchContainer.setResults(BookServiceUtil.getBooks(themeDisplay.getScopeGroupId(),searchContainer.getStart(), searchContainer.getEnd(), new BookCreateDateComparator(true)));
 	%>
 	</liferay-ui:search-container-results>
 	
@@ -48,6 +48,11 @@ boolean addBook = BookPermission.contains(themeDisplay.getPermissionChecker(), t
 		<liferay-ui:search-container-column-text
 			name="price"
 			value="<%= String.valueOf(book.getPrice()) %>"
+			href="<%= viewBookUrl %>"
+		/>
+		<liferay-ui:search-container-column-text
+			name="ImageUrl"
+			value="<%= book.getImageUrl() %>"
 			href="<%= viewBookUrl %>"
 		/>
 		<liferay-ui:search-container-column-jsp

@@ -34,7 +34,10 @@ public class BookServiceClp implements BookService {
 
 		_methodName3 = "getBooks";
 
-		_methodParameterTypes3 = new String[] { "long", "int", "int" };
+		_methodParameterTypes3 = new String[] {
+				"long", "int", "int",
+				"com.liferay.portal.kernel.util.OrderByComparator"
+			};
 
 		_methodName4 = "getBooksCount";
 
@@ -112,13 +115,22 @@ public class BookServiceClp implements BookService {
 
 	@Override
 	public java.util.List<com.liferay.book.model.Book> getBooks(long groupId,
-		int start, int end)
+		int start, int end, com.liferay.portal.kernel.util.OrderByComparator obc)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableService.invokeMethod(_methodName3,
-					_methodParameterTypes3, new Object[] { groupId, start, end });
+					_methodParameterTypes3,
+					new Object[] {
+						groupId,
+						
+					start,
+						
+					end,
+						
+					ClpSerializer.translateInput(obc)
+					});
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);

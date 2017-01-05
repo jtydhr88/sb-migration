@@ -18,6 +18,7 @@
 <%@ page import="com.liferay.book.service.permission.BookPermission"%>
 <%@ page import="com.liferay.portal.kernel.security.permission.ActionKeys"%>
 <%@ page import="com.liferay.book.service.permission.BookModelPermission"%>
+<%@ page import="com.liferay.book.util.comparator.BookCreateDateComparator"%>
 
 <portlet:defineObjects />
 <liferay-theme:defineObjects/>

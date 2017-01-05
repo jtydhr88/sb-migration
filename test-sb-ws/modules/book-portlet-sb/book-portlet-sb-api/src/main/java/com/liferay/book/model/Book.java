@@ -53,4 +53,6 @@ public interface Book extends BookModel, PersistedModel {
 				return Book.class;
 			}
 		};
+
+	public java.lang.String getImageUrl();
 }
