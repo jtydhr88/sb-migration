@@ -1,11 +1,11 @@
 package com.liferay.book.portlet;
 
-import java.awt.print.Book;
-
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 
+import com.liferay.book.model.Book;
 import com.liferay.book.service.BookServiceUtil;
+
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
