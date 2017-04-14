@@ -1,15 +1,9 @@
 package com.liferay.book.service.permission;
 
-import org.osgi.service.component.annotations.Component;
-
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.security.auth.PrincipalException;
 import com.liferay.portal.kernel.security.permission.PermissionChecker;
 
-@Component(
-	immediate = true,
-	property = {"model.class.name=com.liferay.book.model"}
-)
 public class BookPermission {
 	public static final String RESOURCE_NAME = "com.liferay.book.model";
 
